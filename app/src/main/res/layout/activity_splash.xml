@@ -8,7 +8,6 @@
     android:layout_width="match_parent"
     android:background="@drawable/background"
     android:gravity="center"
-
     tools:context=".Splash">
 
     <ImageView
@@ -20,8 +19,6 @@
         android:clipToOutline="true"
         android:id="@+id/logo"
         android:outlineProvider="background"
-        android:layout_gravity="center"
-
 
         />
 

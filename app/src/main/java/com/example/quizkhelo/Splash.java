@@ -1,5 +1,6 @@
 package com.example.quizkhelo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -28,6 +29,25 @@ public class Splash extends AppCompatActivity {
         });
         splashAnim = AnimationUtils.loadAnimation(Splash.this,R.anim.splash_screen_animation);
         logo = findViewById(R.id.logo);
+        splashAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent intent = new Intent(Splash.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
         logo.startAnimation(splashAnim);
 
     }
