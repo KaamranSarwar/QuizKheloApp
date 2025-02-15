@@ -6,13 +6,22 @@
     android:id="@+id/main"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center"
 
     tools:context=".Splash">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello"
-        android:gravity="center"
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/logo"
+        android:background="@drawable/rounded_image"
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+        android:id="@+id/logo"
+        android:outlineProvider="background"
+        android:layout_gravity="center"
+
 
         />
 

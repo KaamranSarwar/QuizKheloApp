@@ -1,6 +1,9 @@
 package com.example.quizkhelo;
 
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Splash extends AppCompatActivity {
+
+    Animation splashAnim;
+    ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +26,10 @@ public class Splash extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        splashAnim = AnimationUtils.loadAnimation(Splash.this,R.anim.splash_screen_animation);
+        logo = findViewById(R.id.logo);
+        logo.startAnimation(splashAnim);
+
     }
+
 }
