@@ -87,7 +87,6 @@ public class QuizActivity extends AppCompatActivity {
 
         if(!(selected.isEmpty()))
         {
-            Toast.makeText(QuizActivity.this,selected,Toast.LENGTH_SHORT).show();
             if(q.getOption1().equals(selected))
                 option1.setChecked(true);
             if(q.getOption2().equals(selected))
