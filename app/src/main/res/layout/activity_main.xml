@@ -28,53 +28,55 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.7"
-        android:gravity="">
+        >
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:gravity="center"
-            app:boxBackgroundMode="outline"
-            app:boxBackgroundColor="@android:color/transparent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             app:boxCornerRadiusTopStart="15dp"
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusBottomStart="15dp"
             app:boxCornerRadiusBottomEnd="15dp"
-            android:textColorHint="@color/white"
+            app:hintTextColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             android:hint="Enter Your Name"
-            app:hintEnabled="true"
-            app:hintAnimationEnabled="true"
+            app:boxBackgroundMode="outline"
+            android:gravity="center"
+            app:boxStrokeColor="@color/black"
             >
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:id="@+id/nameText"
                 android:padding="10dp"
                 android:inputType="text"
                 android:textSize="20sp"
-                android:textColor="@color/white"
-                >
-
-            </com.google.android.material.textfield.TextInputEditText>
-
+                android:textColor="@android:color/white"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical">
+
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="52dp"
+            android:id="@+id/btnStart"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:text="Submit"
+            android:text="Start Quiz"
             android:backgroundTint="@color/buttonBackground"
-            android:background="@drawable/rounded_btn">
+            >
+
 
         </Button>
 
