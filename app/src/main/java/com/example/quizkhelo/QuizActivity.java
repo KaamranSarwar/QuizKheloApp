@@ -131,7 +131,7 @@ public class QuizActivity extends AppCompatActivity {
                 Intent intent = new Intent(QuizActivity.this,ResultActivity.class);
                 intent.putExtra("personName",getIntent().getStringExtra("personName"));
                 intent.putExtra("score",score);
-                intent.putExtra("resText",getResult());
+                intent.putExtra("totalQuestions",totalQuestions);
                 startActivity(intent);
                 finish();
             }
@@ -190,11 +190,7 @@ public class QuizActivity extends AppCompatActivity {
         questions.add(new Question("What is a 'Hat-trick' in cricket?","Scoring 100 runs in a match","Taking three wickets in three consecutive balls","Hitting three sixes in a row","Taking three catches in an innings","Taking three wickets in three consecutive balls"));
         questions.add(new Question("Which country hosts the Ashes series with England?","South Africa","Australia","New Zealand","West Indies","Australia"));
         questions.add(new Question("Who holds the record for the fastest century in T20 Internationals?","Rohit Sharma","Chris Gayle","David Miller","Suryakumar Yadav","David Miller"));
-        questions.add(new Question("Which player has hit the most sixes in international cricket?","MS Dhoni","Chris Gayle","Shahid Afridi","Rohit Sharma","Rohit Sharma"));
         questions.add(new Question("Which team won the ICC T20 World Cup 2022?","India","Australia","England","Pakistan","England"));
-
-
-
     }
 
     private int calculateScore()
@@ -214,15 +210,6 @@ public class QuizActivity extends AppCompatActivity {
         }
         return score;
 
-    }
-    private String getResult()
-    {
-        String res="";
-        for(Question question : questions)
-        {
-            res+= question.getCorrectOption()+ "  === "+ question.getSelectedOption() + "\n";
-        }
-        return res;
     }
 
 }

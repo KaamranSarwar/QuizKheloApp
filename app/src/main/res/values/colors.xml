@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="buttonBackground">#FFC107</color>
     <color name="quizBackground">#D0D5D8</color>
+    <color name="nameColor">#09423D</color>
 
 
 </resources>

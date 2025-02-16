@@ -8,58 +8,103 @@
     tools:context=".ResultActivity"
     android:orientation="vertical">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/btnPrevious"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="&lt; Previous"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:padding="10dp"
-                android:layout_marginStart="10dp"
-                android:textColor="@color/teal_700"
-                android:background="@android:color/transparent"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"/>
-            <TextView
-                android:id="@+id/questionNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="10/10"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black" />
-
-        </RelativeLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        >
-        <TextView
+                <Button
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&lt;"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/questionNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Scoreboard"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="18sp"
-            android:id="@+id/resultText"
+            android:gravity="center"
+            android:orientation="vertical"
             >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="34sp"
+                android:id="@+id/personName"
+                android:textStyle="bold"
+                android:textColor="@color/nameColor"
+                >
 
-        </TextView>
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/quizScore"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                >
+
+            </TextView>
+
+
+        </LinearLayout>
+
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="150dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:text="Share Your Score"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:backgroundTint="@color/nameColor"
+            >
+
+        </Button>
+
+    </LinearLayout>
+
 
 
 </LinearLayout>
