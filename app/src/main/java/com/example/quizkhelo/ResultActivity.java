@@ -1,6 +1,7 @@
 package com.example.quizkhelo;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ResultActivity extends AppCompatActivity {
+    TextView result,result2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +22,10 @@ public class ResultActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        result = findViewById(R.id.questionNumber);
+        result2 = findViewById(R.id.resultText);
+        result.setText(String.valueOf(getIntent().getIntExtra("score",0)));
+        result2.setText(getIntent().getStringExtra("resText"));
+
     }
 }
